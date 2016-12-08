@@ -22,21 +22,4 @@ fs.readFile(file, 'utf8', function (err, data) {
   });
 
   console.log(dictionary[0]);
-
-  var mostCommonCharacter = dictionary.map(function (d) {
-    var highestVal = 0;
-    var highestChar = '';
-
-    Object.keys(d).forEach(function (k) {
-      var v = d[k];
-      if (v > highestVal) {
-        highestVal = v;
-        highestChar = k;
-      }
-    });
-
-    return highestChar
-  });
-
-  console.log(mostCommonCharacter.join(''));
 });
